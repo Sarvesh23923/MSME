@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:msme/ui/screens/hospital_screen.dart';
 import 'package:msme/ui/screens/login_screen.dart';
 import 'package:msme/ui/sheets/navbar.dart';
-
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF811A74)),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: hospital(),
     );
   }
 }
