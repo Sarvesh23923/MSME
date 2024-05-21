@@ -26,8 +26,8 @@ class _NavbarState extends State<Navbar> {
         height: 60,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(10),
-            topRight: Radius.circular(10),
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
           ),
           color: Color.fromRGBO(237, 237, 237, 1),
         ),

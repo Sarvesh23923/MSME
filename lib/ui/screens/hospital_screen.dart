@@ -5,14 +5,14 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
-class hospital extends StatefulWidget {
-  const hospital({super.key});
+class HospitalScreen extends StatefulWidget {
+  const HospitalScreen({super.key});
 
   @override
-  State<hospital> createState() => _hospitalState();
+  State<HospitalScreen> createState() => _HospitalScreenState();
 }
 
-class _hospitalState extends State<hospital> {
+class _HospitalScreenState extends State<HospitalScreen> {
   late GoogleMapController mapController;
 
   final LatLng _center = const LatLng(45.521563, -122.677433);

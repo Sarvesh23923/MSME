@@ -5,14 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:dynamic_timeline/dynamic_timeline.dart';
 import 'package:intl/intl.dart';
 
-class Timeline extends StatefulWidget {
-  const Timeline({super.key});
+class TimelineScreen extends StatefulWidget {
+  const TimelineScreen({super.key});
 
   @override
-  State<Timeline> createState() => _TimelineState();
+  State<TimelineScreen> createState() => _TimelineScreenState();
 }
 
-class _TimelineState extends State<Timeline> {
+class _TimelineScreenState extends State<TimelineScreen> {
   String selectedDay = 'Monday';
 
   final Map<String, List<TimelineItem>> events = {
@@ -49,10 +49,14 @@ class _TimelineState extends State<Timeline> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.arrow_back_ios),
-        ),
+        leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Icon(
+              Icons.arrow_back_ios_new_outlined,
+              size: 22,
+            )),
         title: Text(
           "Timeline",
           style: GoogleFonts.inter(

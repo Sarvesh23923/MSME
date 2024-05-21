@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Exercise extends StatefulWidget {
-  const Exercise({super.key});
+class ExerciseScreen extends StatefulWidget {
+  const ExerciseScreen({super.key});
 
   @override
-  State<Exercise> createState() => _ExerciseState();
+  State<ExerciseScreen> createState() => _ExerciseScreenState();
 }
 
-class _ExerciseState extends State<Exercise> {
+class _ExerciseScreenState extends State<ExerciseScreen> {
   int activeIndex = 0;
 
   final List<List<Map<String, String>>> trimesterContents = [
