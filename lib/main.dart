@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:msme/ui/screens/appointment.dart';
-import 'package:msme/ui/screens/exercise.dart';
-import 'package:msme/ui/screens/location.dart';
 import 'package:msme/ui/screens/login_screen.dart';
-import 'package:msme/ui/screens/notification.dart';
-import 'package:msme/ui/screens/timeline.dart';
-import 'package:msme/ui/sheets/navbar.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF811A74)),
         useMaterial3: true,
       ),
-      home: Location(),
+      home: LoginScreen(),
     );
   }
 }

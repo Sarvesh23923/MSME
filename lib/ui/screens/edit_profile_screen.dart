@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:msme/ui/screens/my_profile_sccreen.dart';
+import 'package:msme/ui/screens/my_profile_screen.dart';
 
 const List<String> list = <String>['Yes', 'No'];
 
