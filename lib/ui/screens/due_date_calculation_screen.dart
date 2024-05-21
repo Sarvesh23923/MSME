@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/widgets.dart';
 import 'package:msme/ui/sheets/congratulations_sheet.dart';
+import 'package:intl/intl.dart';
 
 const List<String> list = <String>[
   'First day of last period',
@@ -17,12 +19,13 @@ class DueDateCalculationScreen extends StatefulWidget {
 }
 
 class _DueDateCalculationScreenState extends State<DueDateCalculationScreen> {
+  final TextEditingController _selectDateController = TextEditingController();
   String dropdownValue = list.first;
+  String? _selectedValue;
+  DateTime? _selectedDate;
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         leading: InkWell(
@@ -44,30 +47,30 @@ class _DueDateCalculationScreenState extends State<DueDateCalculationScreen> {
                 const SizedBox(
                   height: 30,
                 ),
-                Text("Let's Calculate Your Due Date",
-                    style: GoogleFonts.inter(
+                const Text("Let's Calculate Your Due Date",
+                    style: TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: Colors.black)),
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   "Select how do you want to calculate your due date. You can change it later",
-                  style: GoogleFonts.inter(color: Colors.black, fontSize: 16),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "Based On",
-                  style: GoogleFonts.inter(color: Colors.black, fontSize: 18),
+                  style: TextStyle(color: Colors.black, fontSize: 18),
                 ),
                 const SizedBox(
                   height: 5,
                 ),
                 DropdownMenu<String>(
-                  width: screenWidth / 1.13,
+                  width: 370,
                   initialSelection: list.first,
                   inputDecorationTheme: InputDecorationTheme(
                     border: OutlineInputBorder(
@@ -80,7 +83,7 @@ class _DueDateCalculationScreenState extends State<DueDateCalculationScreen> {
                     });
                   },
                   dropdownMenuEntries:
-                      list.map<DropdownMenuEntry<String>>((String value) {
+                  list.map<DropdownMenuEntry<String>>((String value) {
                     return DropdownMenuEntry<String>(
                         value: value, label: value);
                   }).toList(),
@@ -88,29 +91,25 @@ class _DueDateCalculationScreenState extends State<DueDateCalculationScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Select the date",
-                  style: GoogleFonts.inter(color: Colors.black, fontSize: 18),
+                const Text(
+                  "Select a date",
+                  style: TextStyle(color: Colors.black, fontSize: 18),
                 ),
                 const SizedBox(
                   height: 5,
                 ),
-                DropdownMenu<String>(
-                  width: screenWidth / 1.13,
-                  initialSelection: list.first,
-                  inputDecorationTheme: InputDecorationTheme(
+                TextField(
+                  decoration: InputDecoration(
+                    suffixIcon: const Icon(
+                      Icons.arrow_drop_down,
+                      size: 22,
+                    ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
-                  onSelected: (String? value) {
-                    setState(() {});
-                  },
-                  dropdownMenuEntries:
-                      list.map<DropdownMenuEntry<String>>((String value) {
-                    return DropdownMenuEntry<String>(
-                        value: value, label: value);
-                  }).toList(),
+                  controller: _selectDateController,
+                  onTap: _presentDatePicker,
                 ),
                 const SizedBox(height: 300),
                 // const Spacer(),
@@ -121,16 +120,16 @@ class _DueDateCalculationScreenState extends State<DueDateCalculationScreen> {
                     padding: const EdgeInsets.only(top: 20.0),
                     child: ElevatedButton(
                       style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(
+                          backgroundColor: WidgetStateProperty.all<Color>(
                               const Color(0xFF811A74)),
                           shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12.0),
-                          ))),
-                      child: Text(
+                          WidgetStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ))),
+                      child: const Text(
                         'Continue',
-                        style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                       onPressed: () async {
                         _launchCongratulationsSheet();
@@ -155,5 +154,22 @@ class _DueDateCalculationScreenState extends State<DueDateCalculationScreen> {
         builder: (context) {
           return const CongratulationsSheet();
         });
+  }
+
+  void _presentDatePicker() {
+    showDatePicker(
+        context: context,
+        initialDate: DateTime.now(),
+        firstDate: DateTime(2022),
+        lastDate: DateTime.now())
+        .then((pickedDate) {
+      if (pickedDate == null) {
+        return;
+      }
+      setState(() {
+        //  _selectedDate = pickedDate;
+        _selectDateController.text = DateFormat.yMd().format(pickedDate);
+      });
+    });
   }
 }

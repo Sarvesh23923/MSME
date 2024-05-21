@@ -144,10 +144,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           backgroundColor: MaterialStateProperty.all<Color>(
                               const Color(0xFF811A74)),
                           shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12.0),
-                          ))),
+                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ))),
                       child: const Text(
                         'Login',
                         style: TextStyle(color: Colors.white, fontSize: 20),
@@ -168,25 +168,25 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Expanded(
                         child: Divider(
-                      thickness: 2,
-                      color: Colors.black,
-                    )),
+                          thickness: 2,
+                          color: Colors.black,
+                        )),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
                       "Or Continue With",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Expanded(
                         child: Divider(
-                      thickness: 2,
-                      color: Colors.black,
-                    )),
+                          thickness: 2,
+                          color: Colors.black,
+                        )),
                   ],
                 ),
                 const SizedBox(

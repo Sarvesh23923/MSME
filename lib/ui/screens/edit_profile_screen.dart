@@ -1,25 +1,27 @@
 import 'package:flutter/material.dart';
-
-import 'due_date_calculation_screen.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:msme/ui/screens/my_profile_sccreen.dart';
 
 const List<String> list = <String>['Yes', 'No'];
 
-class AboutScreen extends StatefulWidget {
-  const AboutScreen({super.key});
+class EditProfileScreen extends StatefulWidget {
+  const EditProfileScreen({super.key});
 
   @override
-  State<AboutScreen> createState() => _AboutScreenState();
+  State<EditProfileScreen> createState() => _EditProfileScreenState();
 }
 
-class _AboutScreenState extends State<AboutScreen> {
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _ageController = TextEditingController();
+class _EditProfileScreenState extends State<EditProfileScreen> {
   String dropdownValue = list.first;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 100.0),
+          child: Text("Profile"),
+        ),
         leading: InkWell(
             onTap: () {
               Navigator.pop(context);
@@ -29,24 +31,33 @@ class _AboutScreenState extends State<AboutScreen> {
               size: 22,
             )),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: ListView(
-          children: [
-            Column(
+      body: ListView(
+        children: [
+          const SizedBox(
+            height: 10,
+          ),
+          Column(
+            children: [
+              SvgPicture.asset(
+                'assets/images/profile_image.svg',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'Sofia Larina',
+                style: TextStyle(fontSize: 22, color: Colors.black),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  height: 30,
-                ),
-                const Text("Let's Complete Your Profile",
-                    style: TextStyle(
-                        fontSize: 26,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black)),
-                const SizedBox(
-                  height: 20,
-                ),
                 const Text(
                   "Name",
                   style: TextStyle(color: Colors.black, fontSize: 18),
@@ -56,7 +67,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.phone,
-                  controller: _nameController,
+                  // controller: _ageController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
@@ -75,12 +86,50 @@ class _AboutScreenState extends State<AboutScreen> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.phone,
-                  controller: _ageController,
+                  // controller: _ageController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
-                      hintText: 'Enter Age'),
+                      hintText: 'Enter age'),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "Name of spouse",
+                  style: TextStyle(color: Colors.black, fontSize: 18),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.phone,
+                  // controller: _ageController,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      hintText: 'Enter name your spouse'),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "Mobile No",
+                  style: TextStyle(color: Colors.black, fontSize: 18),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.phone,
+                  // controller: _ageController,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      hintText: 'Enter mobile no'),
                 ),
                 const SizedBox(
                   height: 20,
@@ -140,8 +189,30 @@ class _AboutScreenState extends State<AboutScreen> {
                         value: value, label: value);
                   }).toList(),
                 ),
-                const SizedBox(height: 150),
-                // const Spacer(),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "Address",
+                  style: TextStyle(color: Colors.black, fontSize: 18),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.multiline,
+                  minLines: 3,
+                  maxLines: null,
+                  // controller: _ageController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 SizedBox(
                   height: 80,
                   width: 380,
@@ -157,14 +228,14 @@ class _AboutScreenState extends State<AboutScreen> {
                                 borderRadius: BorderRadius.circular(12.0),
                               ))),
                       child: const Text(
-                        'Continue',
+                        'Update',
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                       onPressed: () async {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const DueDateCalculationScreen()));
+                                builder: (context) => const MyProfileScreen()));
                       },
                     ),
                   ),
@@ -172,8 +243,8 @@ class _AboutScreenState extends State<AboutScreen> {
                 const SizedBox(height: 10),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

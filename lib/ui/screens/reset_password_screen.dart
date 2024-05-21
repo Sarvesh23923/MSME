@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:msme/ui/screens/dashboard_screen.dart';
 import 'package:msme/ui/screens/sign_up_screen.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
@@ -12,7 +12,7 @@ class ResetPasswordScreen extends StatefulWidget {
 class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   final TextEditingController _newPasswordController = TextEditingController();
   final TextEditingController _reEnterNewPasswordController =
-      TextEditingController();
+  TextEditingController();
   bool _passwordVisible = true;
   bool isChecked = false;
 
@@ -42,17 +42,17 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             const SizedBox(
               height: 30,
             ),
-            Text(
+            const Text(
               "Reset Your Password",
-              style: GoogleFonts.inter(
+              style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
             const SizedBox(height: 30),
-            Text(
+            const Text(
               "New Password",
-              style: GoogleFonts.inter(color: Colors.black, fontSize: 18),
+              style: TextStyle(color: Colors.black, fontSize: 18),
             ),
             const SizedBox(
               height: 10,
@@ -80,9 +80,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               ),
             ),
             const SizedBox(height: 30),
-            Text(
+            const Text(
               "Re-enter Password",
-              style: GoogleFonts.inter(color: Colors.black, fontSize: 18),
+              style: TextStyle(color: Colors.black, fontSize: 18),
             ),
             const SizedBox(
               height: 10,
@@ -124,9 +124,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     });
                   },
                 ),
-                Text(
+                const Text(
                   "Remember Me",
-                  style: GoogleFonts.inter(fontSize: 18, color: Colors.black),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                 )
               ],
             ),
@@ -142,18 +142,17 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                           const Color(0xFF811A74)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.0),
-                      ))),
-                  child: Text(
+                            borderRadius: BorderRadius.circular(12.0),
+                          ))),
+                  child: const Text(
                     'Confirm',
-                    style: GoogleFonts.inter(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   onPressed: () async {
-                    /*Navigator.push(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SignUpScreen()));*/
-                    //Should navigate to Dashboard Screen
+                            builder: (context) => const DashboardScreen()));
                   },
                 ),
               ),
