@@ -1,9 +1,10 @@
 // ignore_for_file: prefer_const_constructors, camel_case_types, unused_import, unused_local_variable, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, deprecated_member_use, unused_field, unused_element
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:rate_in_stars/rate_in_stars.dart';
 
 class hospital extends StatefulWidget {
   const hospital({super.key});
@@ -34,7 +35,6 @@ class _hospitalState extends State<hospital> {
             Navigator.pop(context);
           },
         ),
-        
         title: Padding(
           padding: const EdgeInsets.only(right: 50, left: 95),
           child: Text(
@@ -45,7 +45,6 @@ class _hospitalState extends State<hospital> {
             ),
           ),
         ),
-        
       ),
       body: Column(
         children: [
@@ -101,13 +100,16 @@ class _hospitalState extends State<hospital> {
             //   ),
             // ),
           ),
+          SizedBox(
+            height: 10,
+          ),
           Expanded(
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30)),
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10)),
                 boxShadow: [
                   BoxShadow(
                     color:
@@ -118,94 +120,469 @@ class _hospitalState extends State<hospital> {
                   ),
                 ],
               ),
-              
               child: ListView(
                 children: [
                   Card(
                     color: Color(0xFFFEFEFE),
                     child: ListTile(
-                      title: Text('Hospital Name'),
-                      subtitle: Text('Location'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.call),
-                        onPressed: () {},
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hospital Name',
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              RatingStars(
+                                editable: true,
+                                rating: 3.5,
+                                iconSize: 18,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "3.5 Stars",
+                                style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/location_pin.svg",
+                                height: 25,
+                                width: 25,
+                              ),
+                              SizedBox(width: 10),
+                              Text("3.5 Km"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/24-7.svg",
+                                height: 35,
+                                width: 35,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   Card(
                     color: Color(0xFFFEFEFE),
                     child: ListTile(
-                      title: Text('Hospital Name'),
-                      subtitle: Text('Location'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.call),
-                        onPressed: () {},
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hospital Name',
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              RatingStars(
+                                editable: true,
+                                rating: 3.5,
+                                iconSize: 18,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "3.5 Stars",
+                                style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/location_pin.svg",
+                                height: 25,
+                                width: 25,
+                              ),
+                              SizedBox(width: 10),
+                              Text("3.5 Km"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/24-7.svg",
+                                height: 35,
+                                width: 35,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   Card(
                     color: Color(0xFFFEFEFE),
                     child: ListTile(
-                      title: Text('Hospital Name'),
-                      subtitle: Text('Location'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.call),
-                        onPressed: () {},
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hospital Name',
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              RatingStars(
+                                editable: true,
+                                rating: 3.5,
+                                iconSize: 18,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "3.5 Stars",
+                                style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/location_pin.svg",
+                                height: 25,
+                                width: 25,
+                              ),
+                              SizedBox(width: 10),
+                              Text("3.5 Km"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/24-7.svg",
+                                height: 35,
+                                width: 35,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   Card(
                     color: Color(0xFFFEFEFE),
                     child: ListTile(
-                      title: Text('Hospital Name'),
-                      subtitle: Text('Location'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.call),
-                        onPressed: () {},
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hospital Name',
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              RatingStars(
+                                editable: true,
+                                rating: 3.5,
+                                iconSize: 18,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "3.5 Stars",
+                                style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/location_pin.svg",
+                                height: 25,
+                                width: 25,
+                              ),
+                              SizedBox(width: 10),
+                              Text("3.5 Km"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/24-7.svg",
+                                height: 35,
+                                width: 35,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   Card(
                     color: Color(0xFFFEFEFE),
                     child: ListTile(
-                      title: Text('Hospital Name'),
-                      subtitle: Text('Location'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.call),
-                        onPressed: () {},
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hospital Name',
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              RatingStars(
+                                editable: true,
+                                rating: 3.5,
+                                iconSize: 18,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "3.5 Stars",
+                                style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/location_pin.svg",
+                                height: 25,
+                                width: 25,
+                              ),
+                              SizedBox(width: 10),
+                              Text("3.5 Km"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/24-7.svg",
+                                height: 35,
+                                width: 35,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   Card(
                     color: Color(0xFFFEFEFE),
                     child: ListTile(
-                      title: Text('Hospital Name'),
-                      subtitle: Text('Location'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.call),
-                        onPressed: () {},
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hospital Name',
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              RatingStars(
+                                editable: true,
+                                rating: 3.5,
+                                iconSize: 18,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "3.5 Stars",
+                                style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/location_pin.svg",
+                                height: 25,
+                                width: 25,
+                              ),
+                              SizedBox(width: 10),
+                              Text("3.5 Km"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/24-7.svg",
+                                height: 35,
+                                width: 35,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   Card(
                     color: Color(0xFFFEFEFE),
                     child: ListTile(
-                      title: Text('Hospital Name'),
-                      subtitle: Text('Location'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.call),
-                        onPressed: () {},
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hospital Name',
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              RatingStars(
+                                editable: true,
+                                rating: 3.5,
+                                iconSize: 18,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "3.5 Stars",
+                                style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/location_pin.svg",
+                                height: 25,
+                                width: 25,
+                              ),
+                              SizedBox(width: 10),
+                              Text("3.5 Km"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/24-7.svg",
+                                height: 35,
+                                width: 35,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   Card(
                     color: Color(0xFFFEFEFE),
                     child: ListTile(
-                      title: Text('Hospital Name'),
-                      subtitle: Text('Location'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.call),
-                        onPressed: () {},
+                      title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Hospital Name',
+                            style: GoogleFonts.inter(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              RatingStars(
+                                editable: true,
+                                rating: 3.5,
+                                iconSize: 18,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "3.5 Stars",
+                                style: GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/location_pin.svg",
+                                height: 25,
+                                width: 25,
+                              ),
+                              SizedBox(width: 10),
+                              Text("3.5 Km"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              SvgPicture.asset(
+                                "assets/images/24-7.svg",
+                                height: 35,
+                                width: 35,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ),
