@@ -100,6 +100,7 @@ class _DueDateCalculationScreenState extends State<DueDateCalculationScreen> {
                 ),
                 TextField(
                   decoration: InputDecoration(
+                    hintText: "Select Date",
                     suffixIcon: const Icon(
                       Icons.arrow_drop_down,
                       size: 22,

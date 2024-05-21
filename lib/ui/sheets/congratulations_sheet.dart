@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:msme/ui/screens/dashboard_screen.dart';
 
 class CongratulationsSheet extends StatefulWidget {
   const CongratulationsSheet({super.key});
@@ -116,10 +117,10 @@ class _CongratulationsSheetState extends State<CongratulationsSheet> {
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                     onPressed: () async {
-                      /* Navigator.push(
+                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ResetPasswordScreen()));*/
+                            builder: (context) => const DashboardScreen()));
                       //should navigate to dashboard screen
                     },
                   ),
