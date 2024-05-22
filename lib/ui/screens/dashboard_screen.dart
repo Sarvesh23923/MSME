@@ -48,15 +48,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: IconButton(onPressed: (){
-              Navigator.push(context, 
-              MaterialPageRoute(builder: (context)=> Notify())
-              );
-            }, 
-            icon: SvgPicture.asset("assets/images/notify.svg")
-            )
-          ),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: IconButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Notify()));
+                  },
+                  icon: SvgPicture.asset("assets/images/notify.svg"))),
         ],
       ),
       body: Padding(
@@ -66,9 +64,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             Text(
               'Hello Sofi !',
               style: GoogleFonts.inter(
-                fontSize: screenWidth * 0.056, 
-                color: Colors.grey.shade700
-                ),
+                  fontSize: screenWidth * 0.056, color: Colors.grey.shade700),
             ),
             SizedBox(
               height: screenHeight * 0.005,
@@ -76,10 +72,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
             Text(
               '3rd week of your pregnancy',
               style: GoogleFonts.inter(
-                fontSize:screenWidth * 0.06, 
-                color: Colors.black,
-                fontWeight: FontWeight.w600
-              ),
+                  fontSize: screenWidth * 0.06,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600),
             ),
             SizedBox(height: screenHeight * 0.04),
             Center(
@@ -124,9 +119,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         Text(
                           'Your baby is in the size of pear',
                           style: GoogleFonts.inter(
-                            fontSize: screenWidth * 0.035, 
-                            color: Colors.grey
-                          ),
+                              fontSize: screenWidth * 0.035,
+                              color: Colors.grey),
                         )
                       ],
                     ),
@@ -135,65 +129,45 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Baby Height",
-                            style: GoogleFonts.inter(
+                      Column(children: [
+                        Text(
+                          "Baby Height",
+                          style: GoogleFonts.inter(
                               fontSize: screenWidth * 0.04,
-                              color: Colors.grey.shade700
-                            ),
-                          ),
-                          SizedBox(height: screenHeight * 0.015),
-                          Text(
-                            "17 cm",
+                              color: Colors.grey.shade700),
+                        ),
+                        SizedBox(height: screenHeight * 0.015),
+                        Text("17 cm",
                             style: GoogleFonts.inter(
-                              fontSize: screenWidth * 0.038,
-                              fontWeight: FontWeight.w600
-                            )
-                          ),
-                        ]
-                      ),
-
-                      Column(
-                        children: [
-                          Text(
-                            "Baby Weight",
-                            style: GoogleFonts.inter(
+                                fontSize: screenWidth * 0.038,
+                                fontWeight: FontWeight.w600)),
+                      ]),
+                      Column(children: [
+                        Text(
+                          "Baby Weight",
+                          style: GoogleFonts.inter(
                               fontSize: screenWidth * 0.04,
-                              color: Colors.grey.shade700
-                            ),
-                          ),
-                          SizedBox(height: screenHeight * 0.015),
-                          Text(
-                            "110 gr",
+                              color: Colors.grey.shade700),
+                        ),
+                        SizedBox(height: screenHeight * 0.015),
+                        Text("110 gr",
                             style: GoogleFonts.inter(
-                              fontSize: screenWidth * 0.038,
-                              fontWeight: FontWeight.w600
-                            )
-                          ),
-                        ]
-                      ),
-
-                      Column(
-                        children: [
-                          Text(
-                            "Days Left",
-                            style: GoogleFonts.inter(
+                                fontSize: screenWidth * 0.038,
+                                fontWeight: FontWeight.w600)),
+                      ]),
+                      Column(children: [
+                        Text(
+                          "Days Left",
+                          style: GoogleFonts.inter(
                               fontSize: screenWidth * 0.04,
-                              color: Colors.grey.shade700
-                            ),
-                          ),
-                          SizedBox(height: screenHeight * 0.015),
-                          Text(
-                            "168 days",
+                              color: Colors.grey.shade700),
+                        ),
+                        SizedBox(height: screenHeight * 0.015),
+                        Text("168 days",
                             style: GoogleFonts.inter(
-                              fontSize: screenWidth * 0.038,
-                              fontWeight: FontWeight.w600
-                            )
-                          ),
-                        ]
-                      ),
+                                fontSize: screenWidth * 0.038,
+                                fontWeight: FontWeight.w600)),
+                      ]),
                     ],
                   )
                 ],
@@ -217,7 +191,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const TimelineScreen()));
+                                  builder: (context) =>
+                                      const TimelineScreen()));
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -252,7 +227,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const ExerciseScreen()));
+                                  builder: (context) =>
+                                      const ExerciseScreen()));
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -287,7 +263,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const HospitalScreen()));
+                                  builder: (context) =>
+                                      const HospitalScreen()));
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -322,7 +299,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const ExerciseScreen()));
+                                  builder: (context) =>
+                                      const ExerciseScreen()));
                         },
                         child: Container(
                           decoration: BoxDecoration(

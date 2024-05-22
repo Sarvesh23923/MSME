@@ -12,7 +12,9 @@ analyzer:
     deprecated_member_use: ignore
     prefer_const_constructors: ignore
     prefer_final_fields: ignore ignore
+    unused_field: ignore
     unused_import: ignore
+    use_key_in_widget_constructors: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:
