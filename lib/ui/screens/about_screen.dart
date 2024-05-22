@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'due_date_calculation_screen.dart';
 
@@ -18,6 +19,8 @@ class _AboutScreenState extends State<AboutScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         leading: InkWell(
@@ -36,23 +39,23 @@ class _AboutScreenState extends State<AboutScreen> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  height: 30,
+                SizedBox(
+                  height: screenWidth * 0.0,
                 ),
-                const Text("Let's Complete Your Profile",
-                    style: TextStyle(
-                        fontSize: 26,
+                Text("Let's Complete Your Profile",
+                    style: GoogleFonts.inter(
+                        fontSize: screenWidth * 0.07,
                         fontWeight: FontWeight.bold,
                         color: Colors.black)),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: screenHeight * 0.03,
                 ),
-                const Text(
+                Text(
                   "Name",
-                  style: TextStyle(color: Colors.black, fontSize: 18),
+                  style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.05),
                 ),
-                const SizedBox(
-                  height: 5,
+                SizedBox(
+                  height: screenHeight * 0.01,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.phone,
@@ -63,15 +66,15 @@ class _AboutScreenState extends State<AboutScreen> {
                       ),
                       hintText: 'Enter Name'),
                 ),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: screenHeight * 0.03,
                 ),
-                const Text(
+                Text(
                   "Age",
-                  style: TextStyle(color: Colors.black, fontSize: 18),
+                  style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.05),
                 ),
-                const SizedBox(
-                  height: 5,
+                SizedBox(
+                  height: screenHeight * 0.01,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.phone,
@@ -82,69 +85,69 @@ class _AboutScreenState extends State<AboutScreen> {
                       ),
                       hintText: 'Enter Age'),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Are you pregnant",
-                  style: TextStyle(color: Colors.black, fontSize: 18),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                DropdownMenu<String>(
-                  width: 370,
-                  initialSelection: list.first,
-                  inputDecorationTheme: InputDecorationTheme(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  onSelected: (String? value) {
-                    setState(() {
-                      dropdownValue = value!;
-                    });
-                  },
-                  dropdownMenuEntries:
-                  list.map<DropdownMenuEntry<String>>((String value) {
-                    return DropdownMenuEntry<String>(
-                        value: value, label: value);
-                  }).toList(),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Do you have children",
-                  style: TextStyle(color: Colors.black, fontSize: 18),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                DropdownMenu<String>(
-                  width: 370,
-                  initialSelection: list.first,
-                  inputDecorationTheme: InputDecorationTheme(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  onSelected: (String? value) {
-                    setState(() {
-                      dropdownValue = value!;
-                    });
-                  },
-                  dropdownMenuEntries:
-                  list.map<DropdownMenuEntry<String>>((String value) {
-                    return DropdownMenuEntry<String>(
-                        value: value, label: value);
-                  }).toList(),
-                ),
-                const SizedBox(height: 150),
-                // const Spacer(),
                 SizedBox(
-                  height: 80,
-                  width: 380,
+                  height: screenHeight * 0.03,
+                ),
+                Text(
+                  "Are you pregnant",
+                  style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.05),
+                ),
+                SizedBox(
+                  height: screenHeight * 0.01,
+                ),
+                DropdownMenu<String>(
+                  width: screenWidth * 0.883,
+                  initialSelection: list.first,
+                  inputDecorationTheme: InputDecorationTheme(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  onSelected: (String? value) {
+                    setState(() {
+                      dropdownValue = value!;
+                    });
+                  },
+                  dropdownMenuEntries:
+                  list.map<DropdownMenuEntry<String>>((String value) {
+                    return DropdownMenuEntry<String>(
+                        value: value, label: value);
+                  }).toList(),
+                ),
+                SizedBox(
+                  height: screenHeight * 0.03,
+                ),
+                Text(
+                  "Do you have children",
+                  style: GoogleFonts.inter(color: Colors.black, fontSize: screenWidth * 0.05),
+                ),
+                SizedBox(
+                  height: screenHeight * 0.01,
+                ),
+                DropdownMenu<String>(
+                  width: screenWidth * 0.883,
+                  initialSelection: list.first,
+                  inputDecorationTheme: InputDecorationTheme(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  onSelected: (String? value) {
+                    setState(() {
+                      dropdownValue = value!;
+                    });
+                  },
+                  dropdownMenuEntries:
+                  list.map<DropdownMenuEntry<String>>((String value) {
+                    return DropdownMenuEntry<String>(
+                        value: value, label: value);
+                  }).toList(),
+                ),
+                 SizedBox(height: screenHeight * 0.09),
+                //  Spacer(),
+                SizedBox(
+                  height: screenHeight * 0.1,
+                  width: screenWidth * 1,
                   child: Padding(
                     padding: const EdgeInsets.only(top: 20.0),
                     child: ElevatedButton(
@@ -156,9 +159,12 @@ class _AboutScreenState extends State<AboutScreen> {
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12.0),
                               ))),
-                      child: const Text(
+                      child:  Text(
                         'Continue',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: GoogleFonts.inter(
+                          color: Colors.white, 
+                          fontSize: screenWidth * 0.06
+                        ),
                       ),
                       onPressed: () async {
                         Navigator.push(
@@ -169,7 +175,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: screenHeight * 0.15),
               ],
             ),
           ],

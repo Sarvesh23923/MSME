@@ -41,17 +41,17 @@ class _CongratulationsSheetState extends State<CongratulationsSheet> {
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: screenHeight * 0.05,
+              height: screenHeight * 0.04,
             ),
             Row(
               children: [
                 SvgPicture.asset(
                   'assets/images/party_popper_image.svg',
-                  height: 30,
-                  width: 30,
+                  height: screenHeight * 0.1,
+                  width: screenWidth * 0.1,
                 ),
-                const SizedBox(
-                  width: 10,
+                SizedBox(
+                  width: screenWidth * 0.04,
                 ),
                 Text(
                   'We have estimated your due date \nas june 5th',
@@ -59,18 +59,18 @@ class _CongratulationsSheetState extends State<CongratulationsSheet> {
                 )
               ],
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: screenHeight * 0.06,
             ),
             Row(
               children: [
                 SvgPicture.asset(
                   'assets/images/pregnant_women_image.svg',
-                  height: 30,
-                  width: 30,
+                  height: screenHeight * 0.1,
+                  width: screenWidth * 0.1,
                 ),
-                const SizedBox(
-                  width: 10,
+                SizedBox(
+                  width: screenHeight * 0.04,
                 ),
                 Text(
                   'This means you are 6 weeks pregnant',
@@ -78,18 +78,18 @@ class _CongratulationsSheetState extends State<CongratulationsSheet> {
                 )
               ],
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: screenHeight * 0.06,
             ),
             Row(
               children: [
                 SvgPicture.asset(
                   'assets/images/calendar_image.svg',
-                  height: 30,
-                  width: 30,
+                  height: screenHeight * 0.1,
+                  width: screenWidth * 0.1,
                 ),
-                const SizedBox(
-                  width: 10,
+                SizedBox(
+                  width: screenWidth * 0.03,
                 ),
                 Text(
                   'This means you have 36 weeks left',
@@ -97,7 +97,7 @@ class _CongratulationsSheetState extends State<CongratulationsSheet> {
                 )
               ],
             ),
-            SizedBox(height: screenHeight * 0.01),
+            SizedBox(height: screenHeight * 0.04),
             Center(
               child: SizedBox(
                 height: screenHeight / 5,
@@ -112,9 +112,12 @@ class _CongratulationsSheetState extends State<CongratulationsSheet> {
                             RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12.0),
                         ))),
-                    child: const Text(
+                    child: Text(
                       'Continue',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: GoogleFonts.inter(
+                        color: Colors.white, 
+                        fontSize: 20
+                      ),
                     ),
                     onPressed: () async {
                        Navigator.push(
