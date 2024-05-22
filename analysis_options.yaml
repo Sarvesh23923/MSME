@@ -11,7 +11,7 @@ analyzer:
   errors:
     deprecated_member_use: ignore
     prefer_const_constructors: ignore
-    prefer_final_fields: ignore ignore
+    prefer_final_fields: ignore
     unused_import: ignore
 include: package:flutter_lints/flutter.yaml
 
