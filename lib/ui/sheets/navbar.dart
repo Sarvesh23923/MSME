@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:msme/ui/screens/appointment.dart';
 import 'package:msme/ui/screens/dashboard_screen.dart';
-import 'package:msme/ui/screens/exercise_screen.dart';
+
 import 'package:msme/ui/screens/my_profile_screen.dart';
 import 'package:msme/ui/screens/report_screen.dart';
 
@@ -20,7 +21,7 @@ class _NavbarState extends State<Navbar> {
   final List<Widget> _pages = [
     DashboardScreen(),
     ReportScreen(),
-    ExerciseScreen(),
+    Appointment(),
     MyProfileScreen(),
   ];
 
@@ -37,10 +38,6 @@ class _NavbarState extends State<Navbar> {
             });
           },
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: const Color(0xFF1A73E8),
-          unselectedItemColor: const Color(0xFFA5A5A5),
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
           items: [
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
@@ -70,7 +67,7 @@ class _NavbarState extends State<Navbar> {
                     ? Color.fromRGBO(129, 26, 116, 1)
                     : Colors.black.withOpacity(1),
               ),
-              label: 'Exercise',
+              label: 'Appointment',
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
