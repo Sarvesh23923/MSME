@@ -156,11 +156,12 @@ class DayButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: onTap,
       child: Container(
         margin: EdgeInsets.all(8.0),
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        padding: EdgeInsets.symmetric(horizontal: 13.0, vertical: 8.0),
         decoration: BoxDecoration(
           color: isSelected ? Colors.blue.shade100 : Colors.white,
           border: Border.all(color: Colors.black),
@@ -169,8 +170,9 @@ class DayButton extends StatelessWidget {
         child: Center(
           child: Text(
             day,
-            style: TextStyle(
+            style: GoogleFonts.inter(
               fontWeight: FontWeight.bold,
+              fontSize: screenWidth * 0.04,
               color: isSelected ? Colors.black : Colors.grey,
             ),
           ),
@@ -186,11 +188,18 @@ class Event extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Card(
       color: Colors.blue.shade100,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Center(child: Text(title, style: TextStyle(fontSize: 16))),
+        child: Center(
+          child: Text(title, 
+            style: GoogleFonts.inter(
+              fontSize: screenWidth * 0.05
+            )
+          )
+        ),
       ),
     );
   }
