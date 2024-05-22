@@ -15,12 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF811A74)),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: Navbar(),
     );
   }
 }
