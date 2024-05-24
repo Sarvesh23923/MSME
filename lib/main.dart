@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:msme/ui/screens/appointment.dart';
+import 'package:msme/ui/screens/dashboard_screen.dart';
+import 'package:msme/ui/screens/exercise_screen.dart';
 import 'package:msme/ui/screens/hospital_screen.dart';
 import 'package:msme/ui/screens/login_screen.dart';
 import 'package:msme/ui/screens/user_selection_screen.dart';
