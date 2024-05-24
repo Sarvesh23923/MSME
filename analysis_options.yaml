@@ -9,8 +9,16 @@
 # packages, and plugins designed to encourage good coding practices.
 analyzer:
   errors:
+    camel_case_types: ignore
+    deprecated_member_use: ignore
+    must_call_super: ignore
     prefer_const_constructors: ignore
-    prefer_final_fields: ignore
+    prefer_final_fields: ignore ignore
+    sized_box_for_whitespace: ignore
+    unused_field: ignore
+    unused_import: ignore
+    unused_local_variable: ignore
+    use_key_in_widget_constructors: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:

@@ -60,37 +60,39 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: ListView(
-          children: [
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  trimesterButton("1st Trimester", 0, screenWidth, screenHeight),
-                  trimesterButton("2nd Trimester", 1, screenWidth, screenHeight),
-                  trimesterButton("3rd Trimester", 2, screenWidth, screenHeight),
-                ],
-              ),
-            Expanded(
-              child: SingleChildScrollView(
-                padding: EdgeInsets.all(16.0),
-                child: AnimatedSwitcher(
-                  duration: Duration(milliseconds: 300),
-                  transitionBuilder: (Widget child, Animation<double> animation) {
-                    return SlideTransition(
-                      position: Tween<Offset>(
-                        begin: Offset(1.0, 0.0),
-                        end: Offset(0.0, 0.0),
-                      ).animate(animation),
-                      child: child,
-                    );
-                  },
-                  child: getTrimesterContent(activeIndex),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: ListView(
+            children: [
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    trimesterButton("1st Trimester", 0, screenWidth, screenHeight),
+                    trimesterButton("2nd Trimester", 1, screenWidth, screenHeight),
+                    trimesterButton("3rd Trimester", 2, screenWidth, screenHeight),
+                  ],
+                ),
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: EdgeInsets.all(16.0),
+                  child: AnimatedSwitcher(
+                    duration: Duration(milliseconds: 300),
+                    transitionBuilder: (Widget child, Animation<double> animation) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                          begin: Offset(1.0, 0.0),
+                          end: Offset(0.0, 0.0),
+                        ).animate(animation),
+                        child: child,
+                      );
+                    },
+                    child: getTrimesterContent(activeIndex),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
