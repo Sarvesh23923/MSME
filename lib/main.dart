@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:msme/ui/screens/appointment.dart';
 import 'package:msme/ui/screens/hospital_screen.dart';
 import 'package:msme/ui/screens/login_screen.dart';
+import 'package:msme/ui/screens/user_selection_screen.dart';
 import 'package:msme/ui/sheets/navbar.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF811A74)),
         useMaterial3: true,
       ),
-      home: Navbar(),
+      home: userselection(),
     );
   }
 }
