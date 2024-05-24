@@ -297,22 +297,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ExerciseScreen()));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ExerciseScreen(initialIndex: 1),
+                            ),
+                          );
                         },
                         child: Container(
                           decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  blurRadius: 3,
-                                  offset: const Offset(0, 4),
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(16),
-                              color: Colors.white),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.1),
+                                blurRadius: 3,
+                                offset: const Offset(0, 4),
+                              )
+                            ],
+                            borderRadius: BorderRadius.circular(16),
+                            color: Colors.white,
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -320,7 +322,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 'assets/images/food_image.svg',
                               ),
                               SizedBox(
-                                height: screenHeight * 0.03,
+                                height: MediaQuery.of(context).size.height * 0.03,
                               ),
                               Text(
                                 'Food',
@@ -330,6 +332,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           ),
                         ),
                       ),
+
                     ],
                   ),
                 ),
