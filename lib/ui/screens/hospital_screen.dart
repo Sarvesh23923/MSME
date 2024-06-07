@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rate_in_stars/rate_in_stars.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class HospitalScreen extends StatefulWidget {
   const HospitalScreen({super.key});

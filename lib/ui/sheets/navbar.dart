@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_final_fields
+// ignore_for_file: prefer_final_fields, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -20,7 +20,7 @@ class _NavbarState extends State<Navbar> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     DashboardScreen(),
-    ReportScreen(),
+    // ReportScreen(),
     Appointment(),
     MyProfileScreen(),
   ];

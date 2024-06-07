@@ -28,184 +28,187 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
               size: 22,
             )),
       ),
-      body: ListView(
-        children: [
-          const SizedBox(
-            height: 10,
-          ),
-          Column(
-            children: [
-              SvgPicture.asset(
-                'assets/images/profile_image.svg',
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const Text(
-                'Sofia Larina',
-                style: TextStyle(fontSize: 22, color: Colors.black),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      body: SingleChildScrollView(
+        child: ListView(
+          children: [
+            const SizedBox(
+              height: 10,
+            ),
+            Column(
               children: [
-                const Text(
-                  "Name",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
+                SvgPicture.asset(
+                  'assets/images/profile_image.svg',
                 ),
                 const SizedBox(
-                  height: 5,
+                  height: 10,
                 ),
                 const Text(
-                  "Sofia",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
+                  'Sofia Larina',
+                  style: TextStyle(fontSize: 22, color: Colors.black),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Age",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  "21",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Name of your spouse",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  "Larina",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Mobile No",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  "1122334455",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Are you pregnant",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  "Yes",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Do you have children",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  "Yes",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Address",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  "145, Bakthavachalam nagar, T.kailasampalayam (PO), Tiruchengode - 632709",
-                  style: TextStyle(color: Colors.black, fontSize: 16),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  height: 80,
-                  width: 380,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                          backgroundColor: WidgetStateProperty.all<Color>(
-                              const Color(0xFF811A74)),
-                          shape:
-                          MaterialStateProperty.all<RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12.0),
-                              ))),
-                      child: const Text(
-                        'Edit',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                      onPressed: () async {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const EditProfileScreen()));
-                      },
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 10),
               ],
             ),
-          ),
-        ],
+            const SizedBox(
+              height: 5,
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Name",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    "Sofia",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "Age",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    "21",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "Name of your spouse",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    "Larina",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "Mobile No",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    "1122334455",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "Are you pregnant",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    "Yes",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "Do you have children",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    "Yes",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "Address",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    "145, Bakthavachalam nagar, T.kailasampalayam (PO), Tiruchengode - 632709",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    height: 80,
+                    width: 380,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor: WidgetStateProperty.all<Color>(
+                                const Color(0xFF811A74)),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12.0),
+                            ))),
+                        child: const Text(
+                          'Edit',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        onPressed: () async {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const EditProfileScreen()));
+                        },
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
